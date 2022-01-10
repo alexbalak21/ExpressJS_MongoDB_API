@@ -1,0 +1,29 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/61dcb92b0172e170462d724f
+
+###
+
+POST http://localhost:3000/
+Content-Type: application/json
+
+{
+    "name": "Task 0"
+}
+
+###
+
+DELETE http://localhost:3000/61dcb9860172e170462d7252
+
+
+###
+
+PATCH http://localhost:3000/61dcb92b0172e170462d724f
+Content-Type: application/json
+
+{
+    "name": "New Task"
+}
+
