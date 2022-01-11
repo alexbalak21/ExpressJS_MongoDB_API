@@ -9,7 +9,7 @@ module.exports = router;
 //GET ALL
 router.get("/", async (req, res) => {
     try {
-        const todos = await Todo.find();
+        const todos = await Todo.find({}, { _id: 0 });
         res.json(todos);
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -51,11 +51,10 @@ router.patch("/:id", getTodo, async (req, res) => {
 });
 
 //DELETE ONE
-
 router.delete("/:id", getTodo, async (req, res) => {
     try {
-        await res.todo.remove();
-        res.json({ message: "Deleted Task" });
+        let remouved = await Todo.remove(res.todo);
+        res.json(remouved);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -65,7 +64,7 @@ router.delete("/:id", getTodo, async (req, res) => {
 async function getTodo(req, res, next) {
     let todo;
     try {
-        todo = await Todo.findById(req.params.id);
+        todo = await Todo.findOne({ index: req.params.id });
         if (todo == null) {
             return res.status(404).json({ message: "Cant find Task" });
         }
