@@ -20,6 +20,7 @@ router.get("/", async (req, res) => {
 //GET ONE
 
 router.get("/:id", getTodo, (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     res.json(res.todo);
 });
 

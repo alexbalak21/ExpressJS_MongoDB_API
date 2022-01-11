@@ -1,28 +1,29 @@
 {
-  "name": "expressjs_mongodb_api",
-  "version": "1.0.0",
-  "description": "Creating API using ExpressJS, MongoDB and Mongoose",
-  "main": "index.js",
-  "scripts": {
-    "devStart": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexbalak21/ExpressJS_MongoDB_API.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexbalak21/ExpressJS_MongoDB_API/issues"
-  },
-  "homepage": "https://github.com/alexbalak21/ExpressJS_MongoDB_API#readme",
-  "dependencies": {
-    "express": "^4.17.2",
-    "mongoose": "^6.1.6"
-  },
-  "devDependencies": {
-    "dotenv": "^10.0.0",
-    "nodemon": "^2.0.15"
-  }
+    "name": "expressjs_mongodb_api",
+    "version": "1.0.0",
+    "description": "Creating API using ExpressJS, MongoDB and Mongoose",
+    "main": "server.js",
+    "scripts": {
+        "devStart": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexbalak21/ExpressJS_MongoDB_API.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alexbalak21/ExpressJS_MongoDB_API/issues"
+    },
+    "homepage": "https://github.com/alexbalak21/ExpressJS_MongoDB_API#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.2",
+        "mongoose": "^6.1.6"
+    },
+    "devDependencies": {
+        "dotenv": "^10.0.0",
+        "nodemon": "^2.0.15"
+    }
 }
