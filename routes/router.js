@@ -1,7 +1,6 @@
 const { json } = require("body-parser");
 const express = require("express");
 const { message } = require("statuses");
-const todo = require("../models/todo");
 const router = express.Router();
 const Todo = require("../models/todo");
 
@@ -20,7 +19,6 @@ router.get("/", async (req, res) => {
 //GET ONE
 
 router.get("/:id", getTodo, (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*");
     res.json(res.todo);
 });
 
